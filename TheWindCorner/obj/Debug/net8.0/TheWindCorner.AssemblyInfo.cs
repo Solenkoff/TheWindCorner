@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TheWindCorner")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7ead91dfadde33229d37ee057220142888837635")]
 [assembly: System.Reflection.AssemblyProductAttribute("TheWindCorner")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TheWindCorner")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
