@@ -1,9 +1,9 @@
+using System.Diagnostics;
+using Microsoft.AspNetCore.Mvc;
+using TheWindCorner.Models;
+
 namespace TheWindCorner.Controllers
 {
-    using Microsoft.AspNetCore.Mvc;
-    using System.Diagnostics;
-    using TheWindCorner.Models;
-
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

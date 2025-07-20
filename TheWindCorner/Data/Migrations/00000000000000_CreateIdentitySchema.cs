@@ -1,9 +1,9 @@
-﻿namespace TheWindCorner.Data.Migrations
-{
-    using Microsoft.EntityFrameworkCore.Metadata;
-    using Microsoft.EntityFrameworkCore.Migrations;
-    using System;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 
+namespace TheWindCorner.Data.Migrations
+{
     public partial class CreateIdentitySchema : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
