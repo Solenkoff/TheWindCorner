@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace TheWindCorner.Data.Migrations
+namespace TheWindCorner.Web.Data.Migrations
 {
     public partial class CreateIdentitySchema : Migration
     {

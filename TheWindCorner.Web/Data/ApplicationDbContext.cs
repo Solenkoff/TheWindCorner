@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace TheWindCorner.Data
+namespace TheWindCorner.Web.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {

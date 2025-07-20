@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35919.96 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheWindCorner", "TheWindCorner\TheWindCorner.csproj", "{F6C2A5DD-4C0F-405E-959A-B285D48D3045}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheWindCorner.Web", "TheWindCorner.Web\TheWindCorner.Web.csproj", "{947132E5-C3BD-4D7D-B287-64A191BDA267}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F6C2A5DD-4C0F-405E-959A-B285D48D3045}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F6C2A5DD-4C0F-405E-959A-B285D48D3045}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F6C2A5DD-4C0F-405E-959A-B285D48D3045}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F6C2A5DD-4C0F-405E-959A-B285D48D3045}.Release|Any CPU.Build.0 = Release|Any CPU
+		{947132E5-C3BD-4D7D-B287-64A191BDA267}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{947132E5-C3BD-4D7D-B287-64A191BDA267}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{947132E5-C3BD-4D7D-B287-64A191BDA267}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{947132E5-C3BD-4D7D-B287-64A191BDA267}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {C2A47D22-22D3-46AF-88BE-CB5AB7B2384F}
+		SolutionGuid = {B861672A-79DB-49E4-B5AE-06BBC2910D47}
 	EndGlobalSection
 EndGlobal

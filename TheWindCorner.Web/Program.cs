@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using TheWindCorner.Data;
+using TheWindCorner.Web.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

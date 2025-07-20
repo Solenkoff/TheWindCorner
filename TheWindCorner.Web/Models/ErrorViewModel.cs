@@ -1,4 +1,4 @@
-namespace TheWindCorner.Models
+namespace TheWindCorner.Web.Models
 {
     public class ErrorViewModel
     {

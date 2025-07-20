@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>aspnet-TheWindCorner-253fc151-2be9-4fb8-b94a-321b3c6d8f30</UserSecretsId>
+    <UserSecretsId>aspnet-TheWindCorner.Web-8b75ccde-efb4-4ade-9799-e044042c96ca</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
