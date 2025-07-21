@@ -15,4 +15,9 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.14" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TheWindCorner.Common\TheWindCorner.Common.csproj" />
+    <ProjectReference Include="..\TheWindCorner.Web.ViewModels\TheWindCorner.Web.ViewModels.csproj" />
+  </ItemGroup>
+
 </Project>
