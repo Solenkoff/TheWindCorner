@@ -1,0 +1,19 @@
+﻿namespace TheWindCorner.Common
+{
+       
+    public static class EntityValidationConstants
+    {
+
+        public static class Item
+        {
+            public const int ItemTitleMaxLength = 80;
+            public const int ItemSizeMaxLength = 50;
+            public const int ItemBrandMaxLength = 80;
+            public const int ItemMinYear = 2000;
+            public const int ItemDescriptionMaxLength = 1000;
+
+        }
+
+
+    }
+}
