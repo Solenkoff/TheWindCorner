@@ -11,12 +11,16 @@
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.14" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.14" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.11" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.14" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.14" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\TheWindCorner.Common\TheWindCorner.Common.csproj" />
+    <ProjectReference Include="..\TheWindCorner.Data.Models\TheWindCorner.Data.Models.csproj" />
+    <ProjectReference Include="..\TheWindCorner.Data\TheWindCorner.Data.csproj" />
     <ProjectReference Include="..\TheWindCorner.Web.ViewModels\TheWindCorner.Web.ViewModels.csproj" />
   </ItemGroup>
 
