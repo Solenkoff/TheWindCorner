@@ -1,14 +1,16 @@
 ﻿namespace TheWindCorner.Data.Models.Entities
 {
-    using Microsoft.EntityFrameworkCore;
     using System;
     using System.ComponentModel.DataAnnotations;
+    using Microsoft.EntityFrameworkCore;
 
     using TheWindCorner.Data.Models.Enums;
     using TheWindCorner.Web.Infrastructure.Attributes;
 
     using static TheWindCorner.Common.EntityValidationConstants.Item;
 
+
+    [Comment("Item listed for sale or sought after")]
     public class Item
     {
         [Key]

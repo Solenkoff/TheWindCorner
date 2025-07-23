@@ -19,6 +19,10 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
     options.Password.RequireLowercase = true;
 })
     .AddEntityFrameworkStores<ApplicationDbContext>();
+    //.AddUserManager<ApplicationUser>()
+    //.AddRoleManager<IdentityRole>()
+    //.AddSignInManager<ApplicationUser>();
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
