@@ -8,6 +8,7 @@
     using TheWindCorner.Web.Infrastructure.Attributes;
 
     using static TheWindCorner.Common.EntityValidationConstants.Item;
+    using static TheWindCorner.Common.EntityValidationMessages.Item;
 
 
     [Comment("Item listed for sale or sought after")]
@@ -39,7 +40,7 @@
         public string? Brand { get; set; }
 
         [Required]
-        [RangeUntilCurrentYear(ItemMinYear, ErrorMessage = "Please enter a valid year, 2000 or later!")]
+        [RangeUntilCurrentYear(ItemMinYear, ErrorMessage = ItemYearValidationMassage)]
         [Comment("The Year of the Item's production or collection")]
         public int Year { get; set; }
 
