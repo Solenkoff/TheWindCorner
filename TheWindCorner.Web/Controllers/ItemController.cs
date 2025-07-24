@@ -24,5 +24,44 @@
                 .ToList();
             return View(allItems);
         }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            ViewData["Categories"] = Enum.GetValues(typeof(Category)).Cast<Category>();
+            ViewData["ItemTypes"] = Enum.GetValues(typeof(ItemType)).Cast<ItemType>();
+
+            return this.View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(AddItemInputModel inputModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                ViewData["Categories"] = Enum.GetValues(typeof(Category)).Cast<Category>();
+                ViewData["ItemTypes"] = Enum.GetValues(typeof(ItemType)).Cast<ItemType>();
+                return View(inputModel);
+            }
+
+            Item item = new Item()
+            {
+                Category = inputModel.Category,
+                ItemType = inputModel.ItemType,
+                Title = inputModel.Title,
+                Size = inputModel.Size ?? "-",
+                Brand = inputModel.Brand ?? "-",
+                Year = inputModel.Year,
+                Description = inputModel.Description,
+                IsApproved = false,
+                IsDeleted = false,
+                IsSold = false
+            };
+          
+            this.dbContext.Items.Add(item);
+            this.dbContext.SaveChanges();
+
+            return this.RedirectToAction(nameof(Index));
+        }
     }
 }
