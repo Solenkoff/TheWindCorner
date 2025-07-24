@@ -38,6 +38,7 @@
         [Comment("The Brand Name of the Item")]
         public string? Brand { get; set; }
 
+        [Required]
         [RangeUntilCurrentYear(ItemMinYear, ErrorMessage = "Please enter a valid year, 2000 or later!")]
         [Comment("The Year of the Item's production or collection")]
         public int Year { get; set; }
