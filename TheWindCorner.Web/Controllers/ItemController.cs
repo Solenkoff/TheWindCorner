@@ -63,5 +63,25 @@
 
             return this.RedirectToAction(nameof(Index));
         }
+
+        [HttpGet]
+        public IActionResult Details(string id)
+        {
+            bool isValidId = Guid.TryParse(id, out Guid resultId);
+            if (!isValidId)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+
+            Item? item = this.dbContext
+                .Items
+                .FirstOrDefault(i => i.Id == resultId);
+            if(item == null)
+            {
+                return RedirectToAction(nameof(Index)); 
+            }
+
+            return this.View(item);
+        }
     }
 }
