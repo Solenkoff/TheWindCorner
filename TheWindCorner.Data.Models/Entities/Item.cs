@@ -14,9 +14,10 @@
     [Comment("Item listed for sale or sought after")]
     public class Item
     {
+
         [Key]
         [Comment("Item Identifier")]
-        public Guid Id { get; set; }
+        public Guid Id { get; set; } = Guid.NewGuid();
 
         [Required]
         [Comment("The Category of the Item")]
@@ -34,7 +35,7 @@
         [MaxLength(ItemSizeMaxLength)]
         [Comment("The Size of the Item")]
         public string? Size { get; set; }
-
+             
         [MaxLength(ItemBrandMaxLength)]
         [Comment("The Brand Name of the Item")]
         public string? Brand { get; set; }
@@ -60,5 +61,6 @@
         [Required]
         [Comment("If the Item has been sold")]
         public bool IsSold { get; set; } = false;
+
     }
 }

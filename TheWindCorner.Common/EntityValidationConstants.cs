@@ -18,6 +18,11 @@
 
         }
 
+        public static class ItemComment
+        {
+            public const int ContentMaxLength = 500;
+        }
+
 
     }
 }

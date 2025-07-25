@@ -18,5 +18,10 @@
             public const string ItemDescriptionMinLengthMassage = "Item Description should be at least 10 characters long!";
             public const string ItemDescriptionMaxLengthMassage = "Item Description should not be more than 1000 characters long!";
         }
+
+        public static class ItemComment
+        {
+            public const string ContentMaxLengthMassage = "Item Comment should not be more than 500 characters long!";
+        }
     }
 }
