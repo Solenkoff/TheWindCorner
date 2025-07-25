@@ -1,13 +1,14 @@
 ﻿namespace TheWindCorner.Web.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
+    using Microsoft.EntityFrameworkCore;
 
     using TheWindCorner.Data;
     using TheWindCorner.Data.Models.Entities;
     using TheWindCorner.Data.Models.Enums;
     using TheWindCorner.Web.ViewModels.Item;
 
-    public class ItemController : Controller
+    public class ItemController : BaseController
     {
         private readonly ApplicationDbContext dbContext;
 
@@ -17,16 +18,17 @@
         }
 
         [HttpGet]    
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            IEnumerable<Item> allItems = this.dbContext
+            IEnumerable<Item> allItems = await this.dbContext
                 .Items
-                .ToList();
+                .ToArrayAsync();
+
             return View(allItems);
         }
 
         [HttpGet]
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
             ViewData["Categories"] = Enum.GetValues(typeof(Category)).Cast<Category>();
             ViewData["ItemTypes"] = Enum.GetValues(typeof(ItemType)).Cast<ItemType>();
@@ -35,7 +37,7 @@
         }
 
         [HttpPost]
-        public IActionResult Create(AddItemInputModel inputModel)
+        public async Task<IActionResult> Create(AddItemInputModel inputModel)
         {
             if (!ModelState.IsValid)
             {
@@ -58,24 +60,25 @@
                 IsSold = false
             };
           
-            this.dbContext.Items.Add(item);
-            this.dbContext.SaveChanges();
+            await this.dbContext.Items.AddAsync(item);
+            await this.dbContext.SaveChangesAsync();
 
             return this.RedirectToAction(nameof(Index));
         }
 
         [HttpGet]
-        public IActionResult Details(string id)
-        {
-            bool isValidId = Guid.TryParse(id, out Guid resultId);
-            if (!isValidId)
+        public async Task<IActionResult> Details(string? id)
+        { 
+            Guid itemGuid = Guid.Empty;
+            bool isGuidValid = this.IsGuidValid(id, ref itemGuid);
+            if (!isGuidValid)
             {
                 return RedirectToAction(nameof(Index));
             }
 
-            Item? item = this.dbContext
+            Item? item = await this.dbContext
                 .Items
-                .FirstOrDefault(i => i.Id == resultId);
+                .FirstOrDefaultAsync(i => i.Id == itemGuid);
             if(item == null)
             {
                 return RedirectToAction(nameof(Index)); 
