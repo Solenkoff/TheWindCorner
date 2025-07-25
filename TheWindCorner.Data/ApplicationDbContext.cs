@@ -24,8 +24,9 @@ namespace TheWindCorner.Data
 
 
         public virtual DbSet<Item> Items { get; set; } = null!;
+        public virtual DbSet<ItemComment> ItemComments { get; set; } = null!;
 
-
+         
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
