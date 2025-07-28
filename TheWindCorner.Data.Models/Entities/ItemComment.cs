@@ -30,7 +30,7 @@
         [Required]
         [ForeignKey(nameof(CommentOwner))]
         [Comment("The identifier of the user, who made the comment")]
-        public string UserId { get; set; } = null!;
+        public Guid UserId { get; set; } 
 
         [Comment("The user, who made the comment")]
         public virtual ApplicationUser CommentOwner { get; set; } = null!;

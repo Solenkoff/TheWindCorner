@@ -28,7 +28,7 @@
         }
 
         [HttpGet]
-        public async Task<IActionResult> Create()
+        public IActionResult Create()
         {
             ViewData["Categories"] = Enum.GetValues(typeof(Category)).Cast<Category>();
             ViewData["ItemTypes"] = Enum.GetValues(typeof(ItemType)).Cast<ItemType>();
