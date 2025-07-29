@@ -3,19 +3,19 @@
    
     public enum ItemType
     {
-        Sale = 0,
         Board = 1,
-        Mast = 2,
-        Boom = 3,
-        Extension = 4,
-        Fin = 5,
-        Harness = 6,
-        Foil = 7,
-        Gearbag = 8,
-        Baseplate = 9,
-        Kite = 10,
-        Bar = 11,
-        Wing = 12,
-        Other = 13
+        Sale = 2,
+        Mast = 3,
+        Boom = 4,
+        Extension = 5,
+        Fin = 6,
+        Harness = 7,
+        Foil = 8,
+        Gearbag = 9,
+        Baseplate = 10,
+        Kite = 11,
+        Bar = 12,
+        Wing = 13,
+        Other = 14
     }
 }
