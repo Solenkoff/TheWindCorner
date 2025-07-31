@@ -9,12 +9,12 @@
     using static TheWindCorner.Common.EntityValidationMessages.ItemComment;
 
 
-    [Comment("The Comment on an item")]
+    [Comment("The comment on an item")]
     public class ItemComment
     {
 
         [Key]
-        [Comment("ItemComment Identifier")]
+        [Comment("The identifier of the comment made")]
         public Guid Id { get; set; } = Guid.NewGuid();
 
         [Required]
@@ -23,26 +23,28 @@
         public string Content { get; set; } = null!;
 
         [Required]
-        [Comment("The date and time of the comment")]
+        [Comment("The date and time the comment was added or edited")]
         public DateTime CommentedOn { get; set; }
 
+        [Required]
+        [Comment("If the comment has been deleted")]
+        public bool IsDeleted { get; set; } = false;
 
         [Required]
-        [ForeignKey(nameof(CommentOwner))]
         [Comment("The identifier of the user, who made the comment")]
-        public Guid UserId { get; set; } 
+        public Guid OwnerId { get; set; }
 
+        [ForeignKey(nameof(OwnerId))]
         [Comment("The user, who made the comment")]
-        public virtual ApplicationUser CommentOwner { get; set; } = null!;
+        public virtual ApplicationUser Owner { get; set; } = null!;
          
-
         [Required]
-        [ForeignKey(nameof(CommentedItem))]
         [Comment("The identifier of the item, that was commented")]
         public Guid ItemId { get; set; }
 
+        [ForeignKey(nameof(ItemId))]
         [Comment("The item, that was commented")]
-        public virtual Item CommentedItem { get; set; } = null!;
+        public virtual Item Item{ get; set; } = null!;
 
     }
 }

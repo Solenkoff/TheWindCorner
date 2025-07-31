@@ -21,13 +21,14 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole<Guid>>(options =>
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddUserManager<UserManager<ApplicationUser>>()
     .AddSignInManager<SignInManager<ApplicationUser>>();
-    //.AddRoleManager<RoleManager<IdentityRole<Guid>>>()
+//.AddRoleManager<RoleManager<IdentityRole<Guid>>>()
 
-builder.Services.AddTransient<IEmailSender, DummyEmailSender>();
+// !!! builder.Services.AddTransient<IEmailSender, DummyEmailSender>();  // !!! 
 
-builder.Services.AddRazorPages();
 
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddRazorPages();
 
 var app = builder.Build();
 

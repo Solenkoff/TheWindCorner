@@ -12,33 +12,33 @@
     public class AddItemInputModel
     {
         [Required]
-        [EnumDataType(typeof(Category), ErrorMessage = ItemCategoryValidationMassage)]
+        [EnumDataType(typeof(Category), ErrorMessage = CategoryValidationMassage)]
         public Category Category { get; set; }
 
         [Required]
-        [EnumDataType(typeof(ItemType), ErrorMessage = ItemTypeValidationMassage)]
+        [EnumDataType(typeof(ItemType), ErrorMessage = TypeValidationMassage)]
         public ItemType ItemType { get; set; }
 
         [Required]
-        [MinLength(ItemTitleMinLength, ErrorMessage = ItemTitleMinLengthMassage)]
-        [MaxLength(ItemTitleMaxLength, ErrorMessage = ItemTitleMaxLengthMassage)]
+        [MinLength(TitleMinLength, ErrorMessage = TitleMinLengthMassage)]
+        [MaxLength(TitleMaxLength, ErrorMessage = TitleMaxLengthMassage)]
         public string Title { get; set; } = null!;
 
-        [MinLength(ItemSizeMinLength, ErrorMessage = ItemSizeMinLengthMassage)]
-        [MaxLength(ItemSizeMaxLength, ErrorMessage = ItemSizeMaxLengthMassage)]
+        [MinLength(SizeMinLength, ErrorMessage = SizeMinLengthMassage)]
+        [MaxLength(SizeMaxLength, ErrorMessage = SizeMaxLengthMassage)]
         public string? Size { get; set; }
 
-        [MinLength(ItemBrandMinLength, ErrorMessage = ItemBrandMinLengthMassage)]
-        [MaxLength(ItemBrandMaxLength, ErrorMessage = ItemBrandMaxLengthMassage)]
+        [MinLength(BrandMinLength, ErrorMessage = BrandMinLengthMassage)]
+        [MaxLength(BrandMaxLength, ErrorMessage = BrandMaxLengthMassage)]
         public string? Brand { get; set; }
 
         [Required]
-        [RangeUntilCurrentYear(ItemMinYear, ErrorMessage = ItemYearValidationMassage)]
+        [RangeUntilCurrentYear(MinYear, ErrorMessage = YearValidationMassage)]
         public int Year { get; set; }
 
         [Required]
-        [MinLength(ItemDescriptionMinLength, ErrorMessage = ItemDescriptionMinLengthMassage)]
-        [MaxLength(ItemDescriptionMaxLength, ErrorMessage = ItemDescriptionMaxLengthMassage)]
+        [MinLength(DescriptionMinLength, ErrorMessage = DescriptionMinLengthMassage)]
+        [MaxLength(DescriptionMaxLength, ErrorMessage = DescriptionMaxLengthMassage)]
         public string Description { get; set; } = null!;
 
     }
