@@ -22,12 +22,14 @@
         [ProtectedPersonalData]
         [MaxLength(UsernameMaxLength, ErrorMessage = UsernameMaxLengthMessage)]
         [Comment("The username of the user")]
-        public override string? UserName { get; set; } 
+        public override string? UserName { get; set; }
 
+        [PersonalData]
         [MaxLength(UsernameMaxLength, ErrorMessage = UsernameMaxLengthMessage)]
         [Comment("The first name of the user")]
         public string? FirstName { get; set; }
 
+        [PersonalData]
         [MaxLength(LastNameMaxLength, ErrorMessage = LastNameMaxLengthMessage)]
         [Comment("The last name of the user")]
         public string? LastName { get; set; }
