@@ -45,14 +45,18 @@
 
         [Comment("The spot, where the event is to be held")]
         public Spot? Spot { get; set; }
-        
-        [Comment("The image of the event")]
-        public Image? Image { get; set; }
 
         [Required]
         [EnumDataType(typeof(EventStatus))]
         [Comment("The status of the event")]
-        public EventStatus Status { get; set; }
+        public EventStatus Status { get; set; } = EventStatus.Upcoming;
+
+
+        [Comment("All images of the event")]
+        public virtual ICollection<Image> Images { get; set; } = new HashSet<Image>();
+
+        [Comment("All the comments made on the event")]
+        public virtual ICollection<ItemComment> Comments { get; set; } = new HashSet<ItemComment>();
 
     }
 }
