@@ -53,6 +53,7 @@
         public int Year { get; set; }
 
         [Required]
+        [Precision(18, 2)]
         [Range(typeof(decimal), PriceMinValue, PriceMaxValue)]
         [Comment("The Price of the Item")]
         public decimal Price { get; set; }
@@ -61,9 +62,6 @@
         [MaxLength(DescriptionMaxLength)]
         [Comment("A full description of the item")]
         public string Description { get; set; } = null!;
-
-        [Comment("The image of the item")]
-        public Image? Image { get; set; }
 
         [Required]
         [Comment("The date and time, when the item was listed for sale")]
@@ -74,12 +72,13 @@
         public bool IsApproved { get; set; } = false;
 
         [Required]
+        [Comment("If the Item has been sold")]
+        public bool IsSold { get; set; } = false;
+        
+        [Required]
         [Comment("If the Item has been deleted")]
         public bool IsDeleted { get; set; } = false;
 
-        [Required]
-        [Comment("If the Item has been sold")]
-        public bool IsSold { get; set; } = false;
 
         [Required]
         [Comment("The Identifier of the Item's Owner")]
@@ -88,6 +87,10 @@
         [ForeignKey(nameof(OwnerId))]
         [Comment("The Owner of the Item")]
         public virtual ApplicationUser Owner { get; set; } = null!;
+
+
+        [Comment("All images of the item")]
+        public virtual ICollection<Image> Images { get; set; } = new HashSet<Image>();
 
         [Comment("All the comments made on the item")]
         public virtual ICollection<ItemComment> Comments { get; set; } = new HashSet<ItemComment>();
