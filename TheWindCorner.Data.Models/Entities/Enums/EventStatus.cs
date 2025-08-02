@@ -5,7 +5,8 @@
     {
         Upcoming = 1,
         Ongoing = 2,
-        Finished = 3
+        Finished = 3,
+        Cancelled = 4
     }
 
 }

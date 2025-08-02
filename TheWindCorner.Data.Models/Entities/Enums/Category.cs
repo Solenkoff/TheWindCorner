@@ -5,6 +5,7 @@
     {
         Windsurfing = 1,
         Kitesurfing = 2,
-        Wingfoiling = 3
+        Wingfoiling = 3,
+        Other
     }
 }
