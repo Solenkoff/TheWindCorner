@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 using TheWindCorner.Data.Models.Entities;
 using TheWindCorner.Data.Models.User;
 
@@ -21,11 +22,18 @@ namespace TheWindCorner.Data
             : base(options)
         {
 
+
         }
 
-
+        public virtual DbSet<Spot> Spots { get; set; } = null!;
         public virtual DbSet<Item> Items { get; set; } = null!;
+        public virtual DbSet<WantedItem> WantedItems { get; set; } = null!;
+        public virtual DbSet<SpotComment> SpotComments { get; set; } = null!;
         public virtual DbSet<ItemComment> ItemComments { get; set; } = null!;
+        public virtual DbSet<WantedItemComment> WantedItemComments { get; set; } = null!;
+        public virtual DbSet<Notification> Notifications { get; set; } = null!;
+        public virtual DbSet<Event> Events { get; set; } = null!;
+        public virtual DbSet<Image> Images { get; set; } = null!;
 
          
         protected override void OnModelCreating(ModelBuilder builder)
