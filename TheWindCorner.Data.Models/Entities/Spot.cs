@@ -28,9 +28,6 @@
         [Comment("A full description of the spot")]
         public string Description { get; set; } = null!;
 
-        [Comment("The image of the spot")]
-        public Image? Image { get; set; }
-
         [Required]
         [Range(-90, 90, ErrorMessage = LatitudeValidationMessage)]
         [Comment("The latitude of the spot's location")]
@@ -46,12 +43,13 @@
         public DateTime DateAdded { get; set; }
 
         [Required]
+        [Comment("If the spot has been approved for listing")]
+        public bool IsApproved { get; set; } = false;
+        
+        [Required]
         [Comment("If the spot has been deleted")]
         public bool IsDeleted { get; set; } = false;
 
-        [Required]
-        [Comment("If the spot has been approved for listing")]
-        public bool IsApproved { get; set; } = false;
 
         [Required]
         [Comment("The identifier of the user, who added the spot")]
@@ -60,6 +58,10 @@
         [ForeignKey(nameof(AddedByUserId))]
         [Comment("The user, who added the spot")]
         public virtual ApplicationUser AddedByUser { get; set; } = null!;
+
+
+        [Comment("All images of the spot")]
+        public virtual ICollection<Image> Images { get; set; } = new HashSet<Image>();
 
         [Comment("All the comments made on the item")]
         public virtual ICollection<SpotComment> Comments { get; set; } = new HashSet<SpotComment>();
