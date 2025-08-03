@@ -28,12 +28,22 @@
         [Comment("A full description of the wanted item")]
         public string Description { get; set; } = null!;
 
-        [Comment("The image of the wanted item")]
-        public Image? Image { get; set; }
-
         [Required]
         [Comment("The date and time, when the sought item was listed")]
         public DateTime DateAdded { get; set; }
+
+        [Required]
+        [Comment("If the wanted item has been approved for listing")]
+        public bool IsApproved { get; set; } = false;
+
+        [Required]
+        [Comment("If the wanted item has been bought")]
+        public bool IsBought { get; set; } = false;
+
+        [Required]
+        [Comment("If the wanted item has been deleted")]
+        public bool IsDeleted { get; set; } = false;
+
 
         [Required]
         [Comment("The identifier of the user seeking the item")]
@@ -42,6 +52,10 @@
         [ForeignKey(nameof(OwnerId))]
         [Comment("The user seeking the item")]
         public virtual ApplicationUser Owner { get; set; } = null!;
+
+
+        [Comment("All images of the wanted item")]
+        public virtual ICollection<Image> Images { get; set; } = new HashSet<Image>();
 
         [Comment("All the comments made on the item")]
         public virtual ICollection<WantedItemComment> Comments { get; set; } = new HashSet<WantedItemComment>();
