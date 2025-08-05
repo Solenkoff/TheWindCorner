@@ -1,5 +1,6 @@
 ﻿namespace TheWindCorner.Web.ViewModels.Item
 {
+    using Microsoft.EntityFrameworkCore;
     using System.ComponentModel.DataAnnotations;
 
     using TheWindCorner.Data.Models.Enums;
@@ -32,14 +33,26 @@
         [MaxLength(BrandMaxLength, ErrorMessage = BrandMaxLengthMassage)]
         public string? Brand { get; set; }
 
+        [MaxLength(ModelMaxLength)]
+        [MinLength(ModelMinLength)]
+        public string? Model { get; set; }
+
         [Required]
         [RangeUntilCurrentYear(MinYear, ErrorMessage = YearValidationMassage)]
         public int Year { get; set; }
 
         [Required]
+        [Precision(18, 2)]
+        [Range(typeof(decimal), PriceMinValue, PriceMaxValue)]
+        public decimal Price { get; set; }
+
+        [Required]
         [MinLength(DescriptionMinLength, ErrorMessage = DescriptionMinLengthMassage)]
         [MaxLength(DescriptionMaxLength, ErrorMessage = DescriptionMaxLengthMassage)]
         public string Description { get; set; } = null!;
+
+        [Comment("The image of the item")]
+        public Image? Image { get; set; }
 
     }
 }
