@@ -65,8 +65,8 @@ namespace TheWindCorner.Web.Areas.Identity.Pages.Account
         {
             [Required]
             [Display(Name = "Username")]
-            [StringLength(50, ErrorMessage = "The username must be at most 50 characters long.")]
-            public string Username { get; set; }
+            [StringLength(50, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 2)]
+            public string UserName { get; set; }
 
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
@@ -112,7 +112,7 @@ namespace TheWindCorner.Web.Areas.Identity.Pages.Account
             {
                 var user = CreateUser();
 
-                await _userStore.SetUserNameAsync(user, Input.Username, CancellationToken.None);
+                await _userStore.SetUserNameAsync(user, Input.UserName, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);   // !!! 
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
