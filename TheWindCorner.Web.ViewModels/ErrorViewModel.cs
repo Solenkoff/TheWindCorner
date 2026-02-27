@@ -1,4 +1,4 @@
-namespace TheWindCorner.Web.Models
+namespace TheWindCorner.Web.ViewModels
 {
     public class ErrorViewModel
     {
