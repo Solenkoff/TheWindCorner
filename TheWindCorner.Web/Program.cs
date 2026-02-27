@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using TheWindCorner.Web.Data;
+using TheWindCorner.Data;
 
 namespace TheWindCorner.Web
 {

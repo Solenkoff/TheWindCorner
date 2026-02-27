@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TheWindCorner.Common\TheWindCorner.Common.csproj" />
+    <ProjectReference Include="..\TheWindCorner.Data\TheWindCorner.Data.csproj" />
     <ProjectReference Include="..\TheWindCorner.Web.ViewModels\TheWindCorner.Web.ViewModels.csproj" />
   </ItemGroup>
 
