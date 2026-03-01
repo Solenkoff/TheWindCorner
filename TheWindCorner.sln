@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{6B7498C7-65F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheWindCorner.Data", "TheWindCorner.Data\TheWindCorner.Data.csproj", "{1B7ACD54-2802-4A2B-9C30-D0C164810FE5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheWindCorner.Web.Infrastructure", "TheWindCorner.Web.Infrastructure\TheWindCorner.Web.Infrastructure.csproj", "{3E9B92F2-66D7-43E1-81ED-62F8D3B290BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{1B7ACD54-2802-4A2B-9C30-D0C164810FE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B7ACD54-2802-4A2B-9C30-D0C164810FE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B7ACD54-2802-4A2B-9C30-D0C164810FE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E9B92F2-66D7-43E1-81ED-62F8D3B290BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E9B92F2-66D7-43E1-81ED-62F8D3B290BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E9B92F2-66D7-43E1-81ED-62F8D3B290BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E9B92F2-66D7-43E1-81ED-62F8D3B290BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,6 +58,7 @@ Global
 		{921EF396-4DA5-4B44-B189-721FCF4A498F} = {6B7498C7-65F3-4457-8A8B-01C0C45D0D4B}
 		{6B49A399-90D7-4E3D-B51E-4574957AF20A} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{1B7ACD54-2802-4A2B-9C30-D0C164810FE5} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{3E9B92F2-66D7-43E1-81ED-62F8D3B290BF} = {6B7498C7-65F3-4457-8A8B-01C0C45D0D4B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2B8BA1B9-1A0B-4B68-97F2-592755160D26}

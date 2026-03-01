@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TheWindCorner.Common\TheWindCorner.Common.csproj" />
     <ProjectReference Include="..\TheWindCorner.Data.Models\TheWindCorner.Data.Models.csproj" />
   </ItemGroup>
 
