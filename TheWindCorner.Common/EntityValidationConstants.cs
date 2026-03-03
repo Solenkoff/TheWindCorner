@@ -23,6 +23,12 @@
             public const int DescriptionMaxLength = 1000;
         }
 
+        public static class Image
+        {
+            public const int PathMaxLength = 2048;
+        }
+
+
 
     }
 }
