@@ -16,6 +16,13 @@
 
         }
 
+        public static class WantedItem
+        {
+            public const int TitleMaxLength = 80;
+
+            public const int DescriptionMaxLength = 1000;
+        }
+
 
     }
 }
