@@ -1,22 +1,26 @@
 ﻿namespace TheWindCorner.Data.Models.Entities
 {
-    using Microsoft.EntityFrameworkCore;
     using System;
-    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    
+    using Microsoft.EntityFrameworkCore;
+
+    using TheWindCorner.Data.Models.Entities.Contracts;
+    using TheWindCorner.Data.Models.Enums;
     using TheWindCorner.Data.Models.User;
 
     using static TheWindCorner.Common.EntityValidationConstants.Spot;
     using static TheWindCorner.Common.EntityValidationMessages.Spot;
 
     [Comment("A location, where one of the wind-sports can be practiced")]
-    public class Spot
+    public class Spot : INotifiableEntity
     {
         [Key]
         [Comment("The identifier of the spot")]
         public Guid Id { get; set; } = Guid.NewGuid();
+
+        [Comment("The entity type used for notification routing")]
+        public NotifiableEntityType EntityType => NotifiableEntityType.Spot;
 
         [Required]
         [MaxLength(NameMaxLength, ErrorMessage = NameMaxLengthMessage)]
@@ -51,11 +55,11 @@
 
         [Required]
         [Comment("The identifier of the user, who added this spot")]
-        public Guid AddedByUserId { get; set; }
+        public Guid CreatedById { get; set; }
 
-        [ForeignKey(nameof(AddedByUserId))]
+        [ForeignKey(nameof(CreatedById))]
         [Comment("The user, who added this spot")]
-        public virtual ApplicationUser AddedByUser { get; set; } = null!;
+        public virtual ApplicationUser CreatedBy { get; set; } = null!;
 
 
         [Comment("All users who have this as their home spot")]

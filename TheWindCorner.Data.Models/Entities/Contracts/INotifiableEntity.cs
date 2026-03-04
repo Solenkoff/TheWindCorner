@@ -6,7 +6,7 @@
     public interface INotifiableEntity
     {
         Guid Id { get; }
-        Guid OwnerId { get; }
+        Guid CreatedById { get; }
         NotifiableEntityType EntityType { get; }
     }
 }

@@ -2,19 +2,26 @@
 {
     using System;
     using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
     using Microsoft.EntityFrameworkCore;
 
     using TheWindCorner.Web.Infrastructure.Attributes;
+    using TheWindCorner.Data.Models.Entities.Contracts;
     using TheWindCorner.Data.Models.Enums;
+    using TheWindCorner.Data.Models.User;
 
     using static TheWindCorner.Common.EntityValidationConstants.Item;
     using static TheWindCorner.Common.EntityValidationMessages.Item;
 
-    public class Item
+    [Comment("Item listed for sale")]
+    public class Item : INotifiableEntity
     {
         [Key]
         [Comment("Item Identifier")]
         public Guid Id { get; set; } = Guid.NewGuid();
+
+        [Comment("The entity type used for notification routing")]
+        public NotifiableEntityType EntityType => NotifiableEntityType.Item;
 
         [Required]
         [Comment("The Category of the Item")]
@@ -41,10 +48,9 @@
         [Comment("The Model Name of the Item")]
         public string? Model { get; set; }
 
-
         [RangeUntilCurrentYear(MinYear, ErrorMessage = YearValidationMassage)]
         [Comment("The Year of the Item's production or collection")]
-        public int Year { get; set; }
+        public int? Year { get; set; }
 
         [Required]
         [Precision(18, 2)]
@@ -73,6 +79,13 @@
         [Comment("If the Item has been deleted")]
         public bool IsDeleted { get; set; } = false;
 
-       
+        [Required]
+        [Comment("The Identifier of the user who added the item listing")]
+        public Guid CreatedById { get; set; }
+
+        [ForeignKey(nameof(CreatedById))]
+        [Comment("The user who added the item listing")]
+        public virtual ApplicationUser CreatedBy { get; set; } = null!;
+
     }
 }
