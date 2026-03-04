@@ -1,30 +1,30 @@
 ﻿namespace TheWindCorner.Data.Models.User
 {
-    using Microsoft.EntityFrameworkCore;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    using Microsoft.AspNetCore.Identity;
+    using Microsoft.EntityFrameworkCore;
+
     using TheWindCorner.Data.Models.Entities;
 
     using static TheWindCorner.Common.EntityValidationConstants.User;
     using static TheWindCorner.Common.EntityValidationMessages.User;
 
 
-    public class ApplicationUser
+    public class ApplicationUser : IdentityUser<Guid>
     {
-        [Key]
-        [Comment("The identifier of the user")]
-        public Guid Id { get; set; } = Guid.NewGuid();
+        public ApplicationUser()
+        {
+            this.Id = Guid.NewGuid();
+        }
 
-        [Required]
-        [MaxLength(UsernameMaxLength, ErrorMessage = UsernameMaxLengthMessage)]
-        [Comment("The username of the user")]
-        public override string? UserName { get; set; }
-
-        [MaxLength(UsernameMaxLength, ErrorMessage = UsernameMaxLengthMessage)]
+        [PersonalData]
+        [MaxLength(FirstNameMaxLength, ErrorMessage = FirstNameMaxLengthMessage)]
         [Comment("The first name of the user")]
         public string? FirstName { get; set; }
 
+        [PersonalData]
         [MaxLength(LastNameMaxLength, ErrorMessage = LastNameMaxLengthMessage)]
         [Comment("The last name of the user")]
         public string? LastName { get; set; }
@@ -63,7 +63,6 @@
         [Comment("Spots added by this user")]
         public virtual ICollection<Spot> AddedSpots { get; set; } = new HashSet<Spot>();
 
-
-
     }
+
 }
