@@ -37,5 +37,20 @@
             public const int LastNameMaxLength = 50;
         }
 
+        public static class Spot
+        {
+            public const int NameMinLength = 3;
+            public const int NameMaxLength = 100;
+
+            public const int DescriptionMinLength = 3;
+            public const int DescriptionMaxLength = 1000;
+
+            public const double MinLatitude = -90;
+            public const double MaxLatitude = 90;
+
+            public const double MinLongitude = -180;
+            public const double MaxLongitude = 180;
+        }
+
     }
 }

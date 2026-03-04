@@ -17,5 +17,17 @@
             public const string LastNameMaxLengthMessage = "Wanted item comment should not be more than 50 characters long!";
         }
 
+        public static class Spot
+        {
+            public const string NameMinLengthMessage = "Name should be at least 3 characters long!";
+            public const string NameMaxLengthMessage = "Name should not be more than 100 characters long!";
+
+            public const string DescriptionMinLengthMessage = "Description should be at least 3 characters long!";
+            public const string DescriptionMaxLengthMessage = "Description should not be more than 1000 characters long!";
+
+            public const string LatitudeValidationMessage = "Latitude must be between -90 and 90 degrees.";
+            public const string LongitudeValidationMessage = "Longitude must be between -180 and 180 degrees.";
+        }
+
     }
 }
