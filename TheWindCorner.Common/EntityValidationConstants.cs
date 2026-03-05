@@ -52,5 +52,20 @@
             public const double MaxLongitude = 180;
         }
 
+        public static class Event
+        {
+            public const int TitleMinLength = 2;
+            public const int TitleMaxLength = 50;
+
+            public const int ShortDescriptionMinLength = 10;
+            public const int ShortDescriptionMaxLength = 500;
+
+            public const int FullDescriptionMinLength = 10;
+            public const int FullDescriptionMaxLength = 2000;
+
+            public const int LocationMinLength = 2;
+            public const int LocationMaxLength = 100;
+        }
+
     }
 }
