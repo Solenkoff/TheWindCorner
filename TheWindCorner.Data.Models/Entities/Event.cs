@@ -3,7 +3,8 @@
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using Microsoft.EntityFrameworkCore;
- 
+
+    using TheWindCorner.Data.Models.Enums;
     using TheWindCorner.Data.Models.User;
 
     using static TheWindCorner.Common.EntityValidationConstants.Event;
@@ -43,6 +44,11 @@
         [MaxLength(LocationMaxLength, ErrorMessage = LocationMaxLengthMassage)]
         [Comment("The location, where the event is to be held")]
         public string Location { get; set; } = null!;
+
+        [Required]
+        [EnumDataType(typeof(EventStatus))]
+        [Comment("The status of the event")]
+        public EventStatus Status { get; set; } = EventStatus.Upcoming;
 
         [Comment("The Identifier of the spot, where the event takes place")]
         public Guid? SpotId { get; set; }
