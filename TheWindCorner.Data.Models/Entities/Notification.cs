@@ -29,6 +29,10 @@
         public NotifiableEntityType EntityType { get; set; }
 
         [Required]
+        [Comment("The type of the notification")]
+        public NotificationActionType ActionType { get; set; }
+
+        [Required]
         [Comment("If the notification has been read by the admin")]
         public bool IsRead { get; set; } = false;
 
