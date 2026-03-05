@@ -42,6 +42,18 @@
 
             public const string LocationMinLengthMassage = "Location should be at least 2 characters long!";
             public const string LocationMaxLengthMassage = "Location should not be more than 100 characters long!";
+
+        public static class BlogPost
+        {
+            public const string TitleMinLengthMassage = "Title should be at least 2 characters long!";
+            public const string TitleMaxLengthMassage = "Title should not be more than 70 characters long!";
+
+            public const string ShortTextMinLengthMassage = "ShortText should be at least 10 characters long!";
+            public const string ShortTextMaxLengthMassage = "ShortText should not be more than 800 characters long!";
+
+            public const string FullTextMinLengthMassage = "FullText should be at least 10 characters long!";
+            public const string FullTextMaxLengthMassage = "FullText should not be more than 20000 characters long!";
+
         }
 
     }

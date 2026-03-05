@@ -67,5 +67,21 @@
             public const int LocationMaxLength = 100;
         }
 
+        public static class BlogPost
+        {
+            public const int TitleMinLength = 2;
+            public const int TitleMaxLength = 70;
+
+            public const int ShortTextMinLength = 10;
+            public const int ShortTextMaxLength = 800;
+
+            public const int FullTextMinLength = 10;
+            public const int FullTextMaxLength = 20000;
+
+        }
+
+
+        
+
     }
 }
