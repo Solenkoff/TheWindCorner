@@ -2,8 +2,10 @@
 {
     public enum Category
     {
-        Windsurfing = 0,
-        Kitesurfing = 1,
-        Wingfoiling = 2
+        Unknown = 0,
+        Windsurfing = 1,
+        Kite = 2,
+        Wing = 3,
+        Other = 4
     }
 }

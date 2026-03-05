@@ -20,6 +20,11 @@
 
         [Comment("The entity type used for notification routing")]
         public NotifiableEntityType EntityType => NotifiableEntityType.WantedItem;
+
+        [Required]
+        [Comment("The Category of the Item")]
+        public Category Category { get; set; }
+
         [Required]
         [MaxLength(TitleMaxLength)]
         [Comment("A short descriptive title for the wanted item")]
