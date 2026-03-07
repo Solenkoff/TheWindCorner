@@ -18,6 +18,7 @@
         [Comment("The identifier of the wanted item")]
         public Guid Id { get; set; } = Guid.NewGuid();
 
+        [NotMapped]
         [Comment("The entity type used for notification routing")]
         public NotifiableEntityType EntityType => NotifiableEntityType.WantedItem;
 

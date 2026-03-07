@@ -13,6 +13,7 @@
     using static TheWindCorner.Common.EntityValidationConstants.Item;
     using static TheWindCorner.Common.EntityValidationMessages.Item;
 
+
     [Comment("Item listed for sale")]
     public class Item : INotifiableEntity
     {
@@ -20,6 +21,7 @@
         [Comment("Item Identifier")]
         public Guid Id { get; set; } = Guid.NewGuid();
 
+        [NotMapped]
         [Comment("The entity type used for notification routing")]
         public NotifiableEntityType EntityType => NotifiableEntityType.Item;
 

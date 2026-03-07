@@ -10,6 +10,7 @@
     using static TheWindCorner.Common.EntityValidationConstants.Event;
     using static TheWindCorner.Common.EntityValidationMessages.Event;
 
+
     [Comment("A wind-sports event posted by the admin")]
     public class Event
     {
