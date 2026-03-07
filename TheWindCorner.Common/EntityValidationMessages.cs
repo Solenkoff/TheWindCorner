@@ -32,16 +32,17 @@
         public static class Event
         {
             public const string TitleMinLengthMassage = "Title should be at least 2 characters long!";
-            public const string TitleMaxLengthMassage = "Title should not be more than 50 characters long!";
+            public const string TitleMaxLengthMassage = "Title should not be more than 70 characters long!";
 
             public const string ShortDescriptionMinLengthMassage = "Description should be at least 10 characters long!";
-            public const string ShortDescriptionMaxLengthMassage = "Description should not be more than 500 characters long!";
+            public const string ShortDescriptionMaxLengthMassage = "Description should not be more than 800 characters long!";
 
             public const string FullDescriptionMinLengthMassage = "FullInfo should be at least 10 characters long!";
-            public const string FullDescriptionMaxLengthMassage = "FullInfo should not be more than 2000 characters long!";
+            public const string FullDescriptionMaxLengthMassage = "FullInfo should not be more than 10000 characters long!";
 
             public const string LocationMinLengthMassage = "Location should be at least 2 characters long!";
-            public const string LocationMaxLengthMassage = "Location should not be more than 100 characters long!";
+            public const string LocationMaxLengthMassage = "Location should not be more than 200 characters long!";
+        }
 
         public static class BlogPost
         {
