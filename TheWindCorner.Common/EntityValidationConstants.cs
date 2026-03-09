@@ -92,5 +92,11 @@
             public const int ContentMaxLength = 500;
         }
 
+        public static class SpotComment
+        {
+            public const int ContentMinLength = 2;
+            public const int ContentMaxLength = 1000;
+        }
+
     }
 }
