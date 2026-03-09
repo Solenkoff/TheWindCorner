@@ -86,7 +86,11 @@
             public const int ContentMaxLength = 500;
         }
 
-        
+        public static class WantedItemComment
+        {
+            public const int ContentMinLength = 2;
+            public const int ContentMaxLength = 500;
+        }
 
     }
 }
