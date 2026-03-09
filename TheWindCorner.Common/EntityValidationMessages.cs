@@ -57,5 +57,10 @@
 
         }
 
+        public static class ItemComment
+        {
+            public const string ContentMinLengthMassage = "Item Comment should be at least 2 characters long!";
+            public const string ContentMaxLengthMassage = "Item Comment should not be more than 500 characters long!";
+        }
     }
 }
