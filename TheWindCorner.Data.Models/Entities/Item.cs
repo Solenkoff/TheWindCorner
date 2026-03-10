@@ -55,7 +55,6 @@
         public int? Year { get; set; }
 
         [Required]
-        [Precision(18, 2)]
         [Range(typeof(decimal), PriceMinValue, PriceMaxValue)]
         [Comment("The Price of the Item")]
         public decimal Price { get; set; }

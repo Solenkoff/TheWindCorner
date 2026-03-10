@@ -17,6 +17,13 @@
 
             builder.Property(i => i.ItemType)
                 .HasConversion<string>();
+
+            builder.HasOne(i => i.CreatedBy)
+                .WithMany(u => u.ItemsForSale)
+                .HasForeignKey(i => i.CreatedById)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            builder.HasIndex(i => i.CreatedById);
         }
     }
 }
