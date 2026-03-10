@@ -60,5 +60,8 @@
         [Comment("The user who added the listing of the item they are seeking")]
         public virtual ApplicationUser CreatedBy { get; set; } = null!;
 
+        [Comment("All the comments made on the wanted item")]
+        public virtual ICollection<WantedItemComment> Comments { get; set; } = new HashSet<WantedItemComment>();
+
     }
 }

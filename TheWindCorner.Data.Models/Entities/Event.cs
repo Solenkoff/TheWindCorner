@@ -74,5 +74,8 @@
         [Comment("The admin who created the event")]
         public virtual ApplicationUser CreatedBy { get; set; } = null!;
 
+        [Comment("All the comments made on the event")]
+        public virtual ICollection<EventComment> Comments { get; set; } = new HashSet<EventComment>();
+
     }
 }

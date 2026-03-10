@@ -89,5 +89,8 @@
         [Comment("The user who added the item listing")]
         public virtual ApplicationUser CreatedBy { get; set; } = null!;
 
+        [Comment("All the comments made on the item")]
+        public virtual ICollection<ItemComment> Comments { get; set; } = new HashSet<ItemComment>();
+
     }
 }
