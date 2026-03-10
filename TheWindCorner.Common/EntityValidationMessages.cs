@@ -74,6 +74,11 @@
             public const string ContentMaxLengthMassage = "Item Comment should not be more than 1000 characters long!";
         }
 
+        public static class EventComment
+        {
+            public const string ContentMinLengthMassage = "Event Comment should be at least 2 characters long!";
+            public const string ContentMaxLengthMassage = "Event Comment should not be more than 1000 characters long!";
+        }
 
     }
 }
