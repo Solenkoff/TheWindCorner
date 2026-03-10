@@ -5,7 +5,7 @@
     {
         public static class Item
         {
-            public const string YearValidationMassage = "Please enter a valid year, 2000 or later!";
+            public const string YearValidationMassage = "Year must be between {0} and {1}!";
         }
 
         public static class User
