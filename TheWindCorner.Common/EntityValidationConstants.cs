@@ -80,29 +80,12 @@
 
         }
 
-        public static class ItemComment
+        public static class Comment
         {
             public const int ContentMinLength = 2;
             public const int ContentMaxLength = 500;
         }
 
-        public static class WantedItemComment
-        {
-            public const int ContentMinLength = 2;
-            public const int ContentMaxLength = 500;
-        }
-
-        public static class SpotComment
-        {
-            public const int ContentMinLength = 2;
-            public const int ContentMaxLength = 1000;
-        }
-
-        public static class EventComment
-        {
-            public const int ContentMinLength = 2;
-            public const int ContentMaxLength = 1000;
-        }
 
     }
 }

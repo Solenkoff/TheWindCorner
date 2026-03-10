@@ -57,28 +57,12 @@
 
         }
 
-        public static class ItemComment
+        public static class Comment
         {
-            public const string ContentMinLengthMassage = "Item Comment should be at least 2 characters long!";
-            public const string ContentMaxLengthMassage = "Item Comment should not be more than 500 characters long!";
-        }
-        public static class WantedItemComment
-        {
-            public const string ContentMinLengthMassage = "Wanted item comment should be at least 2 characters long!";
-            public const string ContentMaxLengthMassage = "Wanted item comment should not be more than 500 characters long!";
+            public const string ContentMinLengthMassage = "Comment should be at least 2 characters long!";
+            public const string ContentMaxLengthMassage = "Comment should not be more than 500 characters long!";
         }
 
-        public static class SpotComment
-        {
-            public const string ContentMinLengthMassage = "Item Comment should be at least 2 characters long!";
-            public const string ContentMaxLengthMassage = "Item Comment should not be more than 1000 characters long!";
-        }
-
-        public static class EventComment
-        {
-            public const string ContentMinLengthMassage = "Event Comment should be at least 2 characters long!";
-            public const string ContentMaxLengthMassage = "Event Comment should not be more than 1000 characters long!";
-        }
 
     }
 }
