@@ -63,6 +63,12 @@
         [Comment("Spots added by this user")]
         public virtual ICollection<Spot> AddedSpots { get; set; } = new HashSet<Spot>();
 
+        [Comment("Events created by this user")]
+        public virtual ICollection<Event> Events { get; set; } = new HashSet<Event>();
+
+        [Comment("Blog posts created by this user")]
+        public virtual ICollection<BlogPost> BlogPosts { get; set; } = new HashSet<BlogPost>();
+
     }
 
 }

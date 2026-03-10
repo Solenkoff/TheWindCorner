@@ -22,12 +22,12 @@
         public string Path { get; set; } = null!;
 
         [Required]
-        [Comment("The identifier of the entity this image belongs to")]
-        public Guid EntityId { get; set; }
-
-        [Required]
         [Comment("The type of entity this image belongs to")]
         public ImageEntityType EntityType { get; set; }
+
+        [Required]
+        [Comment("The identifier of the entity this image belongs to")]
+        public Guid EntityId { get; set; }
 
         [Required]
         [Comment("The display order of the image, 0 being the main image")]
