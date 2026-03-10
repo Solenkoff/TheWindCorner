@@ -42,6 +42,8 @@
 
             public const string LocationMinLengthMassage = "Location should be at least 2 characters long!";
             public const string LocationMaxLengthMassage = "Location should not be more than 200 characters long!";
+
+            public const string EndDateMustBeAfterStartDateMessage = "Event end time must be after the start time!";
         }
 
         public static class BlogPost

@@ -12,7 +12,7 @@
 
 
     [Comment("A wind-sports event posted by the admin")]
-    public class Event
+    public class Event : IValidatableObject
     {
         [Key]
         [Comment("Event Identifier")]
@@ -77,5 +77,15 @@
         [Comment("All the comments made on the event")]
         public virtual ICollection<EventComment> Comments { get; set; } = new HashSet<EventComment>();
 
+
+        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+        {
+            if (End <= Start)
+            {
+                yield return new ValidationResult(
+                    EndDateMustBeAfterStartDateMessage,
+                    new[] { nameof(End) });
+            }
+        }
     }
 }
