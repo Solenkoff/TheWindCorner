@@ -5,6 +5,7 @@
     using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore;
 
+    using TheWindCorner.Data.Helpers;
     using TheWindCorner.Data.Models.Entities;
     using TheWindCorner.Data.Models.User;
 
@@ -34,8 +35,12 @@
         public virtual DbSet<SpotComment> SpotComments { get; set; } = null!;
         public virtual DbSet<EventComment> EventComments { get; set; } = null!;
 
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            base.OnModelCreating(builder);
+
+            builder.ApplySoftDeleteQueryFilters();
             builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
 
