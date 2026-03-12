@@ -44,5 +44,18 @@
             builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
 
+
+        public override int SaveChanges()
+        {
+            ChangeTracker.ApplyTimestamps();
+            return base.SaveChanges();
+        }
+
+        public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+        {
+            ChangeTracker.ApplyTimestamps();
+            return await base.SaveChangesAsync(cancellationToken);
+        }
+
     }
 }
