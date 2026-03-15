@@ -1,10 +1,8 @@
-﻿namespace TheWindCorner.Data.Models.Entities
+﻿namespace TheWindCorner.Data.Models.Entities.Comments
 {
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using Microsoft.EntityFrameworkCore;
-
-    using TheWindCorner.Data.Models.Entities.Comments;
 
 
     [Comment("The comment on a spot")]

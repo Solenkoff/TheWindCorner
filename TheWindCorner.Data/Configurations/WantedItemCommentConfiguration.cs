@@ -2,8 +2,7 @@
 {
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
-
-    using TheWindCorner.Data.Models.Entities;
+    using TheWindCorner.Data.Models.Entities.Comments;
 
     public class WantedItemCommentConfiguration : IEntityTypeConfiguration<WantedItemComment>
     {

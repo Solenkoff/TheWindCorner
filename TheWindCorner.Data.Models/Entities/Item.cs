@@ -12,7 +12,7 @@
 
     using static TheWindCorner.Common.EntityValidationConstants.Item;
     using static TheWindCorner.Common.EntityValidationMessages.Item;
-
+    using TheWindCorner.Data.Models.Entities.Comments;
 
     [Comment("Item listed for sale")]
     public class Item : INotifiableEntity

@@ -3,7 +3,7 @@
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using Microsoft.EntityFrameworkCore;
-
+    using TheWindCorner.Data.Models.Entities.Comments;
     using TheWindCorner.Data.Models.Entities.Contracts;
     using TheWindCorner.Data.Models.Enums;
     using TheWindCorner.Data.Models.User;

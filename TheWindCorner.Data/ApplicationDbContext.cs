@@ -7,6 +7,7 @@
 
     using TheWindCorner.Data.Helpers;
     using TheWindCorner.Data.Models.Entities;
+    using TheWindCorner.Data.Models.Entities.Comments;
     using TheWindCorner.Data.Models.User;
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser, IdentityRole<Guid>, Guid>
