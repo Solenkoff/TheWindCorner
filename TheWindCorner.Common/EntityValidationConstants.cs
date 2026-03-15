@@ -6,9 +6,9 @@
         public static class Item
         {
             public const int TitleMaxLength = 80;
-            public const int SizeMaxLength = 50;
-            public const int BrandMaxLength = 80;
-            public const int ModelMaxLength = 80;
+            public const int SizeMaxLength = 20;
+            public const int BrandMaxLength = 50;
+            public const int ModelMaxLength = 60;
             public const int MinYear = 2000;
             public const string PriceMinValue = "1";
             public const string PriceMaxValue = "10000";
@@ -55,7 +55,7 @@
         public static class Event
         {
             public const int TitleMinLength = 2;
-            public const int TitleMaxLength = 70;
+            public const int TitleMaxLength = 80;
 
             public const int ShortDescriptionMinLength = 10;
             public const int ShortDescriptionMaxLength = 800;
@@ -70,7 +70,7 @@
         public static class BlogPost
         {
             public const int TitleMinLength = 2;
-            public const int TitleMaxLength = 70;
+            public const int TitleMaxLength = 80;
 
             public const int ShortTextMinLength = 10;
             public const int ShortTextMaxLength = 800;

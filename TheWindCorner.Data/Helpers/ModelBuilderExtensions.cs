@@ -2,6 +2,8 @@
 {
     using Microsoft.EntityFrameworkCore;
     using TheWindCorner.Data.Models.Entities;
+    using TheWindCorner.Data.Models.Entities.Comments;
+    using TheWindCorner.Data.Models.User;
 
     public static class ModelBuilderExtensions
     {
@@ -17,6 +19,8 @@
             builder.Entity<WantedItemComment>().HasQueryFilter(wic => !wic.IsDeleted);
             builder.Entity<SpotComment>().HasQueryFilter(sc => !sc.IsDeleted);
             builder.Entity<EventComment>().HasQueryFilter(ec => !ec.IsDeleted);
+
+            builder.Entity<ApplicationUser>().HasQueryFilter(u => !u.IsDeleted);
         }
     }
 }
