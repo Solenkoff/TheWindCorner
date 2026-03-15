@@ -15,8 +15,7 @@
             builder.Property(i => i.Path)
                 .IsRequired();
 
-            builder.HasIndex(i => new { i.EntityType, i.EntityId, i.DisplayOrder })
-                .IsUnique();
+            builder.HasIndex(i => new { i.EntityType, i.EntityId, i.DisplayOrder });
         }
     }
 }

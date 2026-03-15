@@ -48,7 +48,7 @@
 
         [Required]
         [Comment("If the user has been deleted")]
-        public bool IsDeleted { get; set; }
+        public bool IsDeleted { get; set; } = false;
 
         [Comment("The date and time when the user has been deleted")]
         public DateTime? DeletedOn { get; set; }

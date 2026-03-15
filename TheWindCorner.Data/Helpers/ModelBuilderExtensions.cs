@@ -19,8 +19,6 @@
             builder.Entity<WantedItemComment>().HasQueryFilter(wic => !wic.IsDeleted);
             builder.Entity<SpotComment>().HasQueryFilter(sc => !sc.IsDeleted);
             builder.Entity<EventComment>().HasQueryFilter(ec => !ec.IsDeleted);
-
-            builder.Entity<ApplicationUser>().HasQueryFilter(u => !u.IsDeleted);
         }
     }
 }
