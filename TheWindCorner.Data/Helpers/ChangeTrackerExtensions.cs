@@ -4,6 +4,8 @@
     using Microsoft.EntityFrameworkCore.ChangeTracking;
 
     using TheWindCorner.Data.Models.Entities;
+    using TheWindCorner.Data.Models.Entities.Comments;
+    using TheWindCorner.Data.Models.User;
 
     public static class ChangeTrackerExtensions
     {
@@ -35,20 +37,14 @@
                     case BlogPost blogPost:
                         blogPost.DateAdded = now;
                         break;
-                    case ItemComment itemComment:
-                        itemComment.CommentedOn = now;
-                        break;
-                    case WantedItemComment wantedItemComment:
-                        wantedItemComment.CommentedOn = now;
-                        break;
-                    case SpotComment spotComment:
-                        spotComment.CommentedOn = now;
-                        break;
-                    case EventComment eventComment:
-                        eventComment.CommentedOn = now;
+                    case BaseComment comment:
+                        comment.CommentedOn = now;
                         break;
                     case Notification notification:
                         notification.CreatedAt = now;
+                        break;
+                    case ApplicationUser user:
+                        user.CreatedOn = now;
                         break;
                 }
             }

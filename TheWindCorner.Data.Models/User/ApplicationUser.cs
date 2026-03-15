@@ -41,7 +41,7 @@
 
         [Required]
         [Comment("The date and time when the user has been created")]
-        public DateTime CreatedOn { get; set; } = DateTime.UtcNow;
+        public DateTime CreatedOn { get; set; }
 
         [Comment("The date and time when the user has been modified")]
         public DateTime? ModifiedOn { get; set; }
