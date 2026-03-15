@@ -1,5 +1,3 @@
-
-
 namespace TheWindCorner.Web
 {
     using Microsoft.AspNetCore.Identity;
@@ -7,6 +5,8 @@ namespace TheWindCorner.Web
 
     using TheWindCorner.Data;
     using TheWindCorner.Data.Models.User;
+    using TheWindCorner.Web.ViewModels;
+    using TheWindCorner.Services.Mapping;
 
     public class Program
     {
@@ -39,6 +39,10 @@ namespace TheWindCorner.Web
             builder.Services.AddRazorPages();
 
             var app = builder.Build();
+
+
+            AutoMapperConfig
+                .RegisterMappings(typeof(ErrorViewModel).Assembly);
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
