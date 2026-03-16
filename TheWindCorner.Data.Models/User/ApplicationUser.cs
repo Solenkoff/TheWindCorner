@@ -1,18 +1,17 @@
 ﻿namespace TheWindCorner.Data.Models.User
 {
+    using Microsoft.AspNetCore.Identity;
+    using Microsoft.EntityFrameworkCore;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using Microsoft.AspNetCore.Identity;
-    using Microsoft.EntityFrameworkCore;
-
     using TheWindCorner.Data.Models.Entities;
-
+    using TheWindCorner.Data.Models.Entities.Contracts;
     using static TheWindCorner.Common.EntityValidationConstants.User;
     using static TheWindCorner.Common.EntityValidationMessages.User;
 
 
-    public class ApplicationUser : IdentityUser<Guid>
+    public class ApplicationUser : IdentityUser<Guid>, IAuditDeletableEntity
     {
         public ApplicationUser()
         {
