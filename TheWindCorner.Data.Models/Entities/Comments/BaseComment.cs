@@ -1,17 +1,16 @@
 ﻿namespace TheWindCorner.Data.Models.Entities.Comments
 {
+    using Microsoft.EntityFrameworkCore;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using Microsoft.EntityFrameworkCore;
-
+    using TheWindCorner.Data.Models.Entities.Contracts;
     using TheWindCorner.Data.Models.User;
-
     using static TheWindCorner.Common.EntityValidationConstants.Comment;
     using static TheWindCorner.Common.EntityValidationMessages.Comment;
 
 
     [Comment("The comment on an entity")]
-    public abstract class BaseComment
+    public abstract class BaseComment : IDeletableEntity
     {
 
         [Key]

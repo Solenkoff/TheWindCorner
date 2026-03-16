@@ -49,7 +49,6 @@
 
             var mapperConfiguration = new MapperConfiguration(config, NullLoggerFactory.Instance);
             MapperInstance = new Mapper(mapperConfiguration);
-            //MapperInstance = new Mapper(new MapperConfiguration(config));
         }
 
         private static IEnumerable<TypesMap> GetFromMaps(IEnumerable<Type> types)

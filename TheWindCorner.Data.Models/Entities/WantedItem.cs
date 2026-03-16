@@ -11,7 +11,7 @@
     using static TheWindCorner.Common.EntityValidationConstants.WantedItem;
 
     [Comment("Item that an user is looking for")]
-    public class WantedItem : INotifiableEntity
+    public class WantedItem : INotifiableEntity, IDeletableEntity
     {
 
         [Key]

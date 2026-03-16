@@ -13,7 +13,7 @@
     using static TheWindCorner.Common.EntityValidationMessages.Spot;
 
     [Comment("A location, where one of the wind-sports can be practiced")]
-    public class Spot : INotifiableEntity
+    public class Spot : INotifiableEntity, IDeletableEntity
     {
         [Key]
         [Comment("The identifier of the spot")]

@@ -1,18 +1,18 @@
 ﻿namespace TheWindCorner.Data.Models.Entities
 {
+    using Microsoft.EntityFrameworkCore;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using Microsoft.EntityFrameworkCore;
     using TheWindCorner.Data.Models.Entities.Comments;
+    using TheWindCorner.Data.Models.Entities.Contracts;
     using TheWindCorner.Data.Models.Enums;
     using TheWindCorner.Data.Models.User;
-
     using static TheWindCorner.Common.EntityValidationConstants.Event;
     using static TheWindCorner.Common.EntityValidationMessages.Event;
 
 
     [Comment("A wind-sports event posted by the admin")]
-    public class Event : IValidatableObject
+    public class Event : IValidatableObject, IDeletableEntity
     {
         [Key]
         [Comment("Event Identifier")]

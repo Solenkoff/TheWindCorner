@@ -1,17 +1,16 @@
 ﻿namespace TheWindCorner.Data.Models.Entities
 {
+    using Microsoft.EntityFrameworkCore;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using Microsoft.EntityFrameworkCore;
-
+    using TheWindCorner.Data.Models.Entities.Contracts;
     using TheWindCorner.Data.Models.User;
-
     using static TheWindCorner.Common.EntityValidationConstants.BlogPost;
     using static TheWindCorner.Common.EntityValidationMessages.BlogPost;
 
 
     [Comment("A blog-post posted by the admin")]
-    public class BlogPost
+    public class BlogPost : IDeletableEntity
     {
         [Key]
         [Comment("BlogPost Identifier")]

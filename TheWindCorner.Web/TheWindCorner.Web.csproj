@@ -22,6 +22,8 @@
     <ProjectReference Include="..\TheWindCorner.Common\TheWindCorner.Common.csproj" />
     <ProjectReference Include="..\TheWindCorner.Data.Models\TheWindCorner.Data.Models.csproj" />
     <ProjectReference Include="..\TheWindCorner.Data\TheWindCorner.Data.csproj" />
+    <ProjectReference Include="..\TheWindCorner.Services.Mapping\TheWindCorner.Services.Mapping.csproj" />
+    <ProjectReference Include="..\TheWindCorner.Web.Infrastructure\TheWindCorner.Web.Infrastructure.csproj" />
     <ProjectReference Include="..\TheWindCorner.Web.ViewModels\TheWindCorner.Web.ViewModels.csproj" />
   </ItemGroup>
 

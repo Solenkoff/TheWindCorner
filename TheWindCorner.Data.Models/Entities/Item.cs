@@ -15,7 +15,7 @@
     using TheWindCorner.Data.Models.Entities.Comments;
 
     [Comment("Item listed for sale")]
-    public class Item : INotifiableEntity
+    public class Item : INotifiableEntity, IDeletableEntity
     {
         [Key]
         [Comment("Item Identifier")]
