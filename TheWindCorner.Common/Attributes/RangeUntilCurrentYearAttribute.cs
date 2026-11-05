@@ -1,4 +1,4 @@
-﻿namespace TheWindCorner.Web.Infrastructure.Attributes
+﻿namespace TheWindCorner.Common.Attributes
 {
     using System.ComponentModel.DataAnnotations;
 

@@ -5,7 +5,7 @@
     using System.ComponentModel.DataAnnotations.Schema;
     using Microsoft.EntityFrameworkCore;
 
-    using TheWindCorner.Web.Infrastructure.Attributes;
+    using TheWindCorner.Common.Attributes;
     using TheWindCorner.Data.Models.Entities.Contracts;
     using TheWindCorner.Data.Models.Enums;
     using TheWindCorner.Data.Models.User;

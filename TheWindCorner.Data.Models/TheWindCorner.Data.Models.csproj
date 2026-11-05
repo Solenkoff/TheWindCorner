@@ -14,7 +14,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TheWindCorner.Common\TheWindCorner.Common.csproj" />
-    <ProjectReference Include="..\TheWindCorner.Web.Infrastructure\TheWindCorner.Web.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
