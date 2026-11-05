@@ -2,11 +2,12 @@ namespace TheWindCorner.Web
 {
     using Microsoft.AspNetCore.Identity;
     using Microsoft.EntityFrameworkCore;
-
     using TheWindCorner.Data;
     using TheWindCorner.Data.Models.User;
-    using TheWindCorner.Web.ViewModels;
+    using TheWindCorner.Data.Repositories;
+    using TheWindCorner.Data.Repositories.Interfaces;
     using TheWindCorner.Services.Mapping;
+    using TheWindCorner.Web.ViewModels;
 
     public class Program
     {
@@ -20,6 +21,8 @@ namespace TheWindCorner.Web
 
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(connectionString));
+
+            builder.Services.AddScoped(typeof(IRepository<,>), typeof(BaseRepository<,>));
 
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
