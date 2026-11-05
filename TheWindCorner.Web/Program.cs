@@ -28,11 +28,8 @@ namespace TheWindCorner.Web
                 ConfigureIdentity(builder, cfg);
             })
                 .AddEntityFrameworkStores<ApplicationDbContext>()
-                .AddRoles<IdentityRole<Guid>>()
-                .AddSignInManager<SignInManager<ApplicationUser>>()
-                .AddUserManager<UserManager<ApplicationUser>>();
-                //.AddUserStore<ApplicationUser>()
-                //.AddDefaultTokenProviders();
+                .AddDefaultUI()
+                .AddDefaultTokenProviders();
 
 
             builder.Services.AddControllersWithViews();
@@ -77,7 +74,7 @@ namespace TheWindCorner.Web
         private static void ConfigureIdentity(WebApplicationBuilder builder, IdentityOptions cfg)
         {
             cfg.Password.RequireDigit =
-                    builder.Configuration.GetValue<bool>("Identity:Password:RequireDigits");
+                builder.Configuration.GetValue<bool>("Identity:Password:RequireDigit");
             cfg.Password.RequireLowercase =
                 builder.Configuration.GetValue<bool>("Identity:Password:RequireLowercase");
             cfg.Password.RequireUppercase =
@@ -92,8 +89,6 @@ namespace TheWindCorner.Web
                 builder.Configuration.GetValue<bool>("Identity:SignIn:RequireConfirmedAccount");
             cfg.SignIn.RequireConfirmedEmail =
                 builder.Configuration.GetValue<bool>("Identity:SignIn:RequireConfirmedEmail");
-            cfg.SignIn.RequireConfirmedPhoneNumber =
-                builder.Configuration.GetValue<bool>("Identity:SignIn:RequireConfirmedPhoneNumber");
             cfg.User.RequireUniqueEmail =
                 builder.Configuration.GetValue<bool>("Identity:User:RequireUniqueEmail");
         }
